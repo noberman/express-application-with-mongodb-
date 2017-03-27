@@ -1,0 +1,13 @@
+<ol>
+{{#each links as |link|}}
+  <li><h3><a href="http://{{link.url}}">{{link.title}}</a>, <a href="/home/{{link.slug}}">[Comments]</a></h3>
+   </li>
+{{/each}}
+</ol>
+
+<form action ="" method="POST">
+  <input type='text' name='url'> URL
+  <input type='text' name='title'> Title
+  <input type='Submit' value='Submit Link!'>
+
+</form>
