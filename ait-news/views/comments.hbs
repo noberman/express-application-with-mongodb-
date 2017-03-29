@@ -1,15 +1,22 @@
 
+<h1 > {{title}} </h1>
+<h3><a href="http://{{url}}"> {{url}}</a></h3>
+<br>
+<h2>Comments:</h2>
 
-<!-- <ul>
+<ul>
 {{#each comments as |comment|}}
-  <li></li>
+  <li> {{comment.user}} says: {{comment.text}}</li>
 {{/each}}
-</ul> -->
+</ul>
 
 
-<form action ="/home/:slug" method="POST">
+<form action ="/home/{{slug}}" method="POST">
+  <input type='text' name='user'> User
   <input type='text' name='text'> Text
-  <input type='user' name='title'> User
   <input type='Submit' value='Comment'>
 
 </form>
+{{#if lastC}}
+<p>(The last comment you made was: {{lastC}})</p>
+{{/if}}

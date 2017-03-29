@@ -21,7 +21,7 @@ const Link = new Schema({
 
 //slug definition goes here
 Link.plugin(URLSlugs('title'));
-Comment.plugin(URLSlugs('user'));
+//Comment.plugin(URLSlugs('user'));
 
 //registering Models
 mongoose.model('Comment', Comment);
